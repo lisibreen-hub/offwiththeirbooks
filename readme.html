@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reviews</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="base.css">
+<body class="reviews"></body>
+</head>
+
+<body>
+ 
+<div class="nav">
+  <div class="site-title">
+    <a href="homepage.html">OFF WITH THEIR BOOKS!</a>
+  </div>
+
+   <div class="nav-links">
+    <a href="readme.html">Read My Reviews</a>
+   <a href="guestreviews.html">Read Guest Reviews</a>
+    <a href="suggestmeabook.html">Suggest A Book</a>
+    <a href="aboutme.html">About Me</a>
+  </div>
+</div>
+
+
+<div class="page-title">Reviews</div>
+
+<img src="curtain.png" class="top-image" alt="Illustration of Alice Peeking Behind Curtain.">>
+
+<div class="container">
+
+  <div class="post" id="nightwood">
+    <button class="toggle">Nightwood by Djuna Barnes</button>
+    <div class="content-wrapper">
+      <div class="content">
+        <p>Stars:★★★★☆</p>
+        <p>One Word Review: Surreal</p>
+        <p>This might be the densest yet shortest book I've ever read. T.S. Eliot's foreword advised readers to read the book more than once because each time will be different. Having only read it once, I can say that Nightwood is an elusive novella that is equal parts beautiful and odd. It sticks with you long after finishing and yet you're not entirely sure you know what it was about. Jeanette Winterson said it best: "Nightwood is itself. It is its own created world, exotic and strange, and reading it is like drinking wine with a pearl dissolving in the glass. You have taken in more than you know, and it will go on doing its work. From now on, a part of you is pearl-lined."</p>
+      </div>
+    
+      <img src="nightwood.jpg" alt="Cover of Nightwood by Djuna Barnes" class="book-img">
+    </div>
+  </div>
+
+  <div class="post" id="assassins-apprentice">
+    <button class="toggle">The Assassin's Apprentice by Robin Hobb</button>
+    <div class="content-wrapper">
+      <div class="content">
+        <p>Stars: ★★★★★</p>
+        <p>One Word Review: Nostalgic</p>
+        <p>I'm calling this book nostalgic not because I've read it before but because it reminds me of how fantasy felt when I was a kid. If you like slow paced, character driven stories with minimal magic and very detailed descriptions of chores you'll love it. If you don't like those things, you will hate it.</p>
+      </div>
+      <img src="royalassasin.jpg" alt="Cover of The Assassin's Apprentice by Robin Hobb" class="book-img">
+    </div>
+  </div>
+
+ 
+ 
+  <div class="post" id="vampire">
+    <button class="toggle">Interview with the Vampire by Anne Rice</button>
+    <div class="content-wrapper">
+      <div class="content">
+        <p>Stars:★★★★☆</p>
+        <p>One Word Review: Decadent</p>
+        <p>Anne Rice knows how to set a mood. Essentially we have some messy, gothic, dramatic vampires traveling around the world and making sure to bring all their problems with them. Once you get past the fantasy element of it, the horror is quite psychological. Rice frames immortality as a kind of exile from time rather than a conquering of it. The shifting time periods lend the novel a feeling of drifting through history like the undead would. The plot loses momentum multiple times throughout the story, but the characters are interesting enough to pull you through.</p>
+      </div>
+      <img src="vampire.jpg" alt="Cover of Interview with the Vampire by Anne Rice" class="book-img">
+    </div>
+  </div>
+
+  <div class="post" id="folk">
+    <button class="toggle">Folk by Zoe Gilbert</button>
+    <div class="content-wrapper">
+      <div class="content">
+        <p>Stars:★★★☆☆</p>
+        <p>One Word Review: Lyrical</p>
+        <p>This collection of short stories is connected by location: a remote island called Neverness. Gilbert's language is lyrical and beautiful, and some of the individual stories stand out, like my personal favorite "FishSkin, Hareskin." However, while the writing is beautiful, several of the stories fall flat...as do their characters. The quick pace and vague world-building works at first, but the readers feeling of confusion is never truly alleviated. At times, the book feels quite disjointed.</p>
+      </div>
+      <img src="folk.jpg" alt="Cover of Folk by Zoe Gilbert" class="book-img">
+    </div>
+  </div>
+
+  <div class="post" id="wizard">
+    <button class="toggle">A Wizard of Earthsea by Ursula K. Le Guin
+</button>
+    <div class="content-wrapper">
+      <div class="content">
+        <p>Stars:★★★☆☆</p>
+        <p>One Word Review: parable </p>
+        <p>To be honest, I had a hard time getting through this little book. I read it quite soon after Royal Assassin by Robin Hobb and found Le Guin's style a bit sluggish in comparison. However, having finished the book, I see that Le Guin was not trying to write the average fantasy novel. The story reads like a parable with 2 dimensional characters and clear messages. In my early reading of the novel, I mistook this for lackluster writing, but around the midway point I understood that the novel is not about the physical action of slaying dragons and curing the sick, but the personal, invisible conflict of the self. Ged's story reads as a parable because it is meant to be one. </p>
+      </div>
+      <img src="earthsea.jpg" alt="Cover of A Wizard of Earthsea by Ursula K. Le Guin" class="book-img">
+    </div>
+  </div>
+
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".toggle");
+
+buttons.forEach(btn => {
+  btn.onclick = function () {
+    const wrapper = this.nextElementSibling;
+    wrapper.classList.toggle("open");
+  };
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const id = window.location.hash.substring(1);
+
+  if (id) {
+    const post = document.getElementById(id);
+
+    if (post) {
+      const wrapper = post.querySelector(".content-wrapper");
+      wrapper.classList.add("open");
+      post.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+});
+</script>
+
+</body>
+</html>

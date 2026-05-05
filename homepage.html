@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's Lisi Reading?</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="base.css">
+</head>
+
+<body class="home"></body>
+
+<div class="nav">
+
+  <div class="site-title">
+    <a href="homepage.html">OFF WITH THEIR BOOKS!</a>
+  </div>
+
+    <div class="nav-links">
+    <a href="readme.html">Read My Reviews</a>
+   <a href="guestreviews.html">Read Guest Reviews</a>
+    <a href="suggestmeabook.html">Suggest A Book</a>
+    <a href="aboutme.html">About Me</a>
+  </div>
+</div>
+
+
+</div>
+
+<div class="hero"></div>
+
+<div class="intro">
+
+  <img src="rabbit.png"
+       class="intro-img"
+       alt="Illustration of the white rabbit from Alice in Wonderland">
+
+  <div class="intro-text">
+    Welcome to my book review website! Every other week I read a book and write a review on it. In 2026, I am trying to read 80 books. At the rate I am going, that probably will not happen. Nevertheless, this website will be where I post bite-sized book reviews of the books I read! Each book gets a one word review, a small blurb review, and a star rating. Over time, this will just become a record of everything I’ve been reading throughout the year. I will also post occasional guest reviews from friends and family! Click on 'Suggest A Book' in the navigation bar if you would like me to review a certain book!
+  </div>
+
+</div>
+
+<div class="middle-section">
+
+  <div class="stats">
+
+    <div style="text-align:center; margin-bottom:18px;">
+      <img src="drowning.png"
+           style="width:140px; height:auto; display:block; margin:0 auto;"
+           alt="Illustration Alice drowning in her tears.">
+      <div style="font-size:12px; margin-top:6px;">
+        (Me drowning in all the books I said I was going to read.)
+      </div>
+    </div>
+
+    <h3>Books Read</h3>
+    <p>23 / 80</p>
+
+    <h3>Favorite Genre</h3>
+    <p>Literary Fiction</p>
+
+    <h3>Current Read</h3>
+    <p>---</p>
+
+  </div>
+
+  <div class="reviews-box">
+    <div class="subtitle">My Recent Reviews</div>
+
+    <div class="slider-wrapper">
+      <button onclick="moveSlide(-1)" aria-label="Previous books">❮</button>
+
+      <div class="slider" id="slider">
+
+        <a href="readme.html#nightwood">
+          <img src="nightwood.jpg"
+               alt="Cover of Nightwood by Djuna Barnes"
+               class="book-img">
+        </a>
+
+        <a href="readme.html#assassins-apprentice">
+          <img src="royalassasin.jpg"
+               alt="Cover of The Assassin's Apprentice by Robin Hobb"
+               class="book-img">
+        </a>
+
+        <a href="readme.html#vampire">
+          <img src="vampire.jpg"
+               alt="Cover of Interview with the Vampire by Anne Rice"
+               class="book-img">
+        </a>
+
+        <a href="readme.html#folk">
+          <img src="folk.jpg"
+               alt="Cover of Folk by Zoe Gilbert"
+               class="book-img">
+        </a>
+
+      </div>
+
+      <button onclick="moveSlide(1)" aria-label="Next books">❯</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function moveSlide(direction) {
+  const slider = document.getElementById("slider");
+
+  if (direction === 1) {
+    slider.appendChild(slider.firstElementChild);
+  } else {
+    slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+  }
+}
+</script>
+
+</body>
+</html>

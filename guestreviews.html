@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guest Reviews</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="base.css">
+</head>
+
+<body class="guest-reviews"></body>
+
+<div class="nav">
+  <div class="site-title">
+    <a href="homepage.html">OFF WITH THEIR BOOKS!</a>
+  </div>
+
+     <div class="nav-links">
+    <a href="readme.html">Read My Reviews</a>
+   <a href="guestreviews.html">Read Guest Reviews</a>
+    <a href="suggestmeabook.html">Suggest A Book</a>
+    <a href="aboutme.html">About Me</a>
+  </div>
+</div>
+
+<div class="page-title">Guest Reviews</div>
+
+<img src="cards.png" class="top-image" alt="Illustration of Alice having tea with the Mad Hatter">>
+
+<div class="container">
+
+  <div class="post" id="darkplaces">
+    <button class="toggle">Dark Places by Gillian Flynn - Review by Erin</button>
+
+    <div class="content-wrapper">
+
+      <img src="darkplaces.jpg" class="book-img" alt="Image of the Dark Placescover">
+
+      <div class="content">
+        <p>Stars: ★★★★☆</p>
+        <p>One Word Review: Haunting</p>
+        <p>Written by the author of Gone Girl, it explores the ongoing burden faced by the only survivor of a family massacre. She is left to heal herself and uncover the secrets behind who was the killer.</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".toggle");
+
+buttons.forEach(btn => {
+  btn.onclick = function () {
+    const wrapper = this.nextElementSibling;
+    wrapper.classList.toggle("open");
+  };
+});
+</script>
+
+</body>
+</html>

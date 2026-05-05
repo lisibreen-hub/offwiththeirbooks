@@ -1,0 +1,476 @@
+/* base */
+
+body {
+  cursor: url('path-to-your-cursor.png'), auto;
+  background-color: rgb(248, 240, 229);
+  font-family: "Instrument Serif", serif;
+  color: rgb(49, 32, 13);
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+/* nav */
+.nav {
+  background-color: rgb(49, 32, 13);
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-title a {
+  font-family: "Viaoda Libre", serif;
+  color: rgb(119, 35, 35);
+  text-decoration: none;
+  font-size: 75px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.site-title a:hover {
+  text-decoration: underline;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  color: rgb(248, 240, 229);
+  text-decoration: none;
+  padding: 14px 20px;
+  margin: 0 10px;
+  font-size: 24px;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background-color: rgb(119, 35, 35);
+}
+
+/* nav for mobile size */
+
+@media screen and (max-width: 768px) {
+
+  .site-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-title a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    padding: 10px 12px;
+    margin: 0;
+  }
+
+}
+
+/* homepage stuff */
+
+.home .hero {
+  text-align: center;
+  padding: 10px 20px 0;
+}
+
+.home .hero-title {
+  font-size: 30px;
+  margin: 0;
+}
+
+.home .hero-image img {
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.home .intro {
+  max-width: 85%;
+  margin: 5px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+.home .intro-img {
+  width: 120px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.home .middle-section {
+  max-width: 1300px;
+  margin: 40px auto;
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+  padding: 0 20px;
+}
+
+.home .stats,
+.home .reviews-box {
+  border: 3px solid rgb(49, 32, 13);
+  padding: 20px;
+  text-align: center;
+}
+
+.home .stats {
+  flex: 0.8;
+  background-color: rgba(0,0,0,0.05);
+}
+
+.home .reviews-box {
+  flex: 2.2;
+  background-color: rgba(0,0,0,0.08);
+}
+
+.home .review-image {
+  flex: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .slider {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.home .slider img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 6px;
+  border: 2px solid rgb(49, 32, 13);
+}
+
+@media screen and (max-width: 768px) {
+  .home .hero-title {
+    font-size: 28px;
+  }
+
+  .home .hero-image img {
+    width: 100%;
+  }
+
+  .home .middle-section {
+    flex-direction: column;
+  }
+
+  .home .review-image {
+    display: none;
+  }
+
+  .home .slider {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .home .slider img {
+    width: 160px;
+    height: 220px;
+  }
+}
+
+/* review page stuff */
+
+.reviews .page-title {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.reviews .top-image {
+  display: block;
+  margin: 5px auto 10px auto;
+  width: 200px;
+  max-width: 80%;
+  height: auto;
+}
+
+.reviews .container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.reviews .post {
+  margin-bottom: 15px;
+}
+
+.reviews .toggle {
+  width: 100%;
+  background-color: rgb(49, 32, 13);
+  color: rgb(248, 240, 229);
+  padding: 15px;
+  font-size: 22px;
+  text-align: left;
+  font-family: "Instrument Serif", serif;
+  border-radius: 6px;
+}
+
+.reviews .toggle:hover {
+  background-color: rgb(119, 35, 35);
+}
+
+.reviews .content-wrapper {
+  display: none;
+  gap: 15px;
+  padding: 15px;
+  border: 2px solid rgb(49, 32, 13);
+  background-color: rgba(0,0,0,0.05);
+}
+
+.reviews .content-wrapper.open {
+  display: flex;
+}
+
+.reviews .book-img {
+    width: 120px;
+    align-self: center;
+  }
+
+.reviews .content {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews .page-title {
+    font-size: 32px;
+  }
+
+  .reviews .content-wrapper.open {
+    flex-direction: column-reverse;
+  }
+
+  .reviews .content {
+    font-size: 16px;
+  }
+
+  .reviews .book-img {
+    width: 100px;
+  }
+}
+
+/* guest reviews */
+
+.guest-reviews {
+  margin: 0;
+  padding: 0;
+}
+
+.guest-reviews .page-title {
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  margin: 10px 0 2px 0;
+}
+
+.guest-reviews .container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.guest-reviews .post {
+  margin-bottom: 15px;
+}
+
+.guest-reviews .top-image {
+  display: block;
+  margin: 10px auto 20px auto;
+  width: 300px;
+  max-width: 80%;
+  height: auto;
+}
+
+.guest-reviews .toggle {
+  width: 100%;
+  background-color: rgb(49, 32, 13);
+  color: rgb(248, 240, 229);
+  padding: 15px;
+  font-size: 22px;
+  text-align: left;
+  cursor: pointer;
+  font-family: "Instrument Serif", serif;
+  border: none;
+  border-radius: 6px;
+}
+
+.guest-reviews .toggle:hover {
+  background-color: rgb(119, 35, 35);
+}
+
+.guest-reviews .content-wrapper {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid rgb(49, 32, 13);
+  background-color: rgba(0,0,0,0.05);
+  gap: 8px;
+}
+
+.guest-reviews .content-wrapper.open {
+  display: flex;
+}
+
+.guest-reviews .book-img {
+  width: 90px;
+  height: auto;
+  display: block;
+  margin: 0;
+  border: 2px solid rgb(49, 32, 13);
+}
+
+.guest-reviews .content {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .guest-reviews .page-title {
+    font-size: 32px;
+  }
+
+  .guest-reviews .toggle {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .guest-reviews .content {
+    font-size: 16px;
+  }
+
+  .guest-reviews .book-img {
+    width: 80px;
+  }
+}
+
+/* suggest */
+
+.suggest .suggest-form {
+  max-width: 500px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.suggest .suggest-form input,
+.suggest .suggest-form textarea {
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid rgb(49, 32, 13);
+  border-radius: 6px;
+  font-family: "Instrument Serif", serif;
+}
+
+.suggest .suggest-form button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: rgb(49, 32, 13);
+  color: rgb(248, 240, 229);
+}
+
+.suggest .suggest-form button:hover {
+  background-color: rgb(119, 35, 35);
+}
+
+/* about */
+
+.about .page-title {
+  text-align: center;
+  font-size: 48px;
+}
+
+.about .about-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.about .about-left {
+  flex: 1;
+  font-size: 30px;
+  line-height: 1.6;
+}
+
+.about .about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .about-img {
+  max-width: 300px;
+  border: 2px solid rgb(49, 32, 13);
+}
+
+.about .socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.about .socials a {
+  color: rgb(49, 32, 13);
+  text-decoration: none;
+}
+
+.about .socials a:hover {
+  color: rgb(119, 35, 35);
+}
+
+@media screen and (max-width: 768px) {
+  .about .about-container {
+    flex-direction: column;
+  }
+
+  .about .about-left {
+    font-size: 18px;
+  }
+
+  .about .page-title {
+    font-size: 32px;
+  }
+}
